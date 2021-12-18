@@ -36,7 +36,11 @@ namespace Payroll_Service
                     case 2:                             // It Will Delete Data from the table According to Their Respective ID
                         Console.WriteLine("Enter the id to Delete Data");
                         int num = Convert.ToInt32(Console.ReadLine());
-                        employeeConfig.DeleteEmployee(num);
+                        int res = employeeConfig.DeleteEmployee(num);
+                        if (res >= 0)
+                        {
+                            Console.WriteLine("Deleted Successfully");
+                        }
                         break;
                     case 3:
                         data.Name = "Gyanendra";        // It Will Update Basic Pay Where Name is Gyanendra
@@ -44,6 +48,9 @@ namespace Payroll_Service
                         employeeConfig.UpdateEmployee(data);
                         break;
                     case 4:
+                        employeeConfig.GetAllEmployees(); // It Will Display all the Data According to Table
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
