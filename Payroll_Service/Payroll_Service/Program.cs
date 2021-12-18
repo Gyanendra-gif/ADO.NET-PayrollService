@@ -39,6 +39,11 @@ namespace Payroll_Service
                         employeeConfig.DeleteEmployee(num);
                         break;
                     case 3:
+                        data.Name = "Gyanendra";        // It Will Update Basic Pay Where Name is Gyanendra
+                        data.Basic_pay = 7000.45;
+                        employeeConfig.UpdateEmployee(data);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
